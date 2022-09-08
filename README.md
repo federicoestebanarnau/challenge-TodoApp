@@ -19,4 +19,4 @@ Objetivo: Desarrollar una aplicación de React que permita crear una tarea, elim
 6. La aplicación debe tener un contador de tareas, mostrar el total de tareas pendientes, y cuando una se marque como completada sumarla al contador. ej: 0 / 5, siendo 0 la cantidad de tareas completas y 5 el total de tareas a completar.
 
 
-![](https://github.com/React-Challenge/todo-app.gif)
+![](https://github.com/pjcaro/React-Challenge/blob/master/todo-app.gif)
