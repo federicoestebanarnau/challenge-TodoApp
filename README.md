@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# ToDo List - Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Instrucciones:
 
-## Available Scripts
+- Para empezar el ejercicio, hacer un clon del repositorio.
+- La entrega del ejercicio resuelto debe ser comunicada al reclutador o en su defecto al responsable del mismo.
+- La entrega será el enlace de GitHub al repositorio público del candidato.
 
-In the project directory, you can run:
+Objetivo: Desarrollar una aplicación de React que permita crear una tarea, eliminarla, completarla, descompletar y permita filtros.
 
-### `npm start`
+1. Al iniciar la aplicación el input debe estar vacío, cuando el usuario escriba una tarea y presione el botón “Add” ésta debe agregarse en el listado de forma inmediata, sin necesidad de recargar la página.
+2. En el listado, cada tarea debe tener un botón que permita eliminar la misma de forma individual.
+3. En el listado, cada tarea debe tener un checkbox, cuando el usuario lo presione la tarea debe marcarse como completada y tacharse.
+4. Si una tarea fue marcada como completada, debe poder desmarcarse y volver a su estado inicial.
+5. La aplicación debe permitir 3 filtros: “All”, “Complete”, “Incomplete”.
+    1. **All**: al presionar este filtro deben mostrarse todas las tareas. Inclusive las que fueron marcadas como completadas.
+    2. **Complete**: al presionar este filtro deben mostrarse únicamente las tareas completadas. Debe permitir marcar las tareas como incompletas. Si no hay tareas completas debe mostrar un texto informando que no hay tareas completadas.
+    3. **Incomplete**: al presionar este filtro deben mostrarse únicamente las tareas incompletas. Debe permitir marcar las tareas como completadas. Si no hay tareas completas debe mostrar un texto informando que no hay tareas incompletas.
+6. La aplicación debe tener un contador de tareas, mostrar el total de tareas pendientes, y cuando una se marque como completada sumarla al contador. ej: 0 / 5, siendo 0 la cantidad de tareas completas y 5 el total de tareas a completar.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![](https://github.com/React-Challenge/todo-app.gif)
