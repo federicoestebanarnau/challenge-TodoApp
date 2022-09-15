@@ -7,7 +7,7 @@ const initialData = [
   { id: 1, title: "Lorem ipsum dolor sit amet", completed: false },
   { id: 2, title: "Vivamus id arcu laoreet", completed: false },
   { id: 3, title: "Donec cursus mi", completed: true },
-  { id: 4, title: "Aenean id fringilla justo", completed: false }
+  { id: 4, title: "Aenean id fringilla justo", completed: false },
 ];
 
 const ToDo = () => {
@@ -17,21 +17,40 @@ const ToDo = () => {
 
   const handleStatus = (item) => {
     // marcar como completada o no una tarea
-
+    setTodos(
+      todos.map((e) => {
+        if (e.id === item.id) {
+          return {
+            ...e,
+            completed: !item.completed,
+          };
+        }
+        return e;
+      })
+    );
   };
 
   const handleRemove = (item) => {
     // eliminar una tarea
-
+    setTodos(todos.filter((el) => el.id !== item.id));
   };
 
   const handleAddTodo = () => {
     // agregar una tarea
+    setTodos([...todos, { id: Date.now(), title: addTodo, completed: false }]);
+    setAddTodo("");
   };
 
   const filterTodos = () => {
     // filtrar tareas por completadas, no completadas, todas.
-    return todos
+
+    if (filter === "all") {
+      return todos;
+    } else if (filter === "complete") {
+      return todos.filter((i) => i.completed);
+    } else if (filter === "incomplete") {
+      return todos.filter((i) => !i.completed);
+    }
   };
 
   const handleChange = (e) => {
@@ -39,12 +58,13 @@ const ToDo = () => {
   };
 
   const visibleTodos = filterTodos();
-  const doneCount = 0
+
+  let doneCount = todos.filter((i) => i.completed === true).length;
 
   return (
     <div>
       <div className="field">
-        <input value={addTodo} onChange={handleChange} />
+        <input placeholder="" value={addTodo} onChange={handleChange} />
         <button
           className="btn btn--add"
           onClick={handleAddTodo}
